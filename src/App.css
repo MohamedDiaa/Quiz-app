@@ -1,10 +1,12 @@
 .Container {
 
-  background-color: black;
-  width: 600px;
+  display: flex;
+  justify-content: center;
 }
 
 .Container div {
 
   left: auto;
+  width: 600px;
+
 }

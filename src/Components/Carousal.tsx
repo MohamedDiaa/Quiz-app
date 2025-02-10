@@ -14,14 +14,19 @@ function Carousal() {
     let prev = selected - 1;
     if (prev >= 0) {
       SetSelected(prev);
+      return;
     }
+    SetSelected(imgs.length - 1);
+
   };
 
   const handleNext = () => {
     let next = selected + 1;
     if (next < imgs.length) {
       SetSelected(next);
+      return
     }
+    SetSelected(0)
   };
   return (
     <div id="carouselExample" className="carousel slide">
