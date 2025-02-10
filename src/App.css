@@ -1,0 +1,10 @@
+.Container {
+
+  background-color: black;
+  width: 600px;
+}
+
+.Container div {
+
+  left: auto;
+}
