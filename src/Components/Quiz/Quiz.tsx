@@ -4,29 +4,45 @@ import cakesList from "../../json/cakes";
 import { useState } from "react";
 
 function Quiz() {
-  const [count, SetCount] = useState(1);
+  let [count, SetCount] = useState(1);
+  let [show, SetShow] = useState(true);
 
-  let subset = [1, 2, 3, 4].map(() => random(cakesList));
+  let subset = [...Array(4).keys()].map(() => random(cakesList));
+  let [answer, setAnswer] = useState(subset[0]);
+  let [shuffled, setShuffled] = useState(shuffle(subset));
 
   return (
     <div id="quiz">
-      {count > 3 ? (
+      {count > 10 ? (
         <h1>Quiz is finished</h1>
       ) : (
         <>
-          <h1 id="quiz-title">Quiz {count}</h1>
-          <div id="quiz-content">
-            <img src={subset[0].img} alt="" />
-            <div>
-              <Question />
-              <Choices
-                options={subset}
-                onAnswered={() => {
-                  SetCount(count + 1);
-                }}
-              />
+          <h1 id="quiz-title">Quiz</h1>
+
+          {show ? (
+            <div id="quiz-content">
+              <img src={answer.img} alt="" />
+              <div>
+                <Question count={count} />
+                <Choices
+                  answer={answer.name}
+                  options={shuffled}
+                  onAnswered={() => {
+                    SetCount(count + 1);
+                    SetShow(false);
+                    setTimeout(() => {
+                      let newSubset = [...Array(4).keys()].map(() =>
+                        random(cakesList)
+                      );
+                      setAnswer(newSubset[0])
+                      setShuffled(shuffle(newSubset));
+                      SetShow(true);
+                    }, 1000);
+                  }}
+                />
+              </div>{" "}
             </div>
-          </div>
+          ) : null}
         </>
       )}
     </div>
@@ -39,4 +55,8 @@ function random(
   array: { name: string; country: string; description: string; img: string }[]
 ) {
   return array[Math.floor(Math.random() * array.length)];
+}
+
+function shuffle(array: { name: string; img: string }[]) {
+  return array.sort(() => Math.random() - 0.5);
 }

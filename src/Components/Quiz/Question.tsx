@@ -1,8 +1,15 @@
 import "./Choices.css"
 
-function Question() {
+interface Props {
+  count: Number
+}
+
+function Question({count}: Props) {
   return (
-    <div className="Question">What is the name of the cake shown in the picture?</div>
+    <>
+        <h3 style={{marginLeft: "20px"}}>Question {`${count}`}</h3>
+        <div className="Question" style={{fontWeight:"bold"}}>What is the name of the cake shown in the picture?</div>
+    </>
   )
 }
 
