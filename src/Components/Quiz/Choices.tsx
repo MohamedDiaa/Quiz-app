@@ -4,7 +4,7 @@ import "./Choices.css";
 interface Props {
   answer: string
   options: { name: string; img: string }[];
-  onAnswered: () => void
+  onAnswered: (userChoice: string) => void
 }
 
 function Choices({ answer, options, onAnswered }: Props) {
@@ -34,7 +34,7 @@ function Choices({ answer, options, onAnswered }: Props) {
               if(answered != -1) return;
               setAnswered(index);
               setTimeout(() => {
-                onAnswered()
+                onAnswered(options[index].name)
               }, 1000);
             }}
           >

@@ -8,7 +8,7 @@ interface Props {
 
 function Boarding({onFinish}: Props) {
 
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (count >= 10) {
