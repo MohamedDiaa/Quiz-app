@@ -22,3 +22,20 @@ ul {
     
 }
 
+#quiz {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#quiz-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#quiz-title {
+    text-align: center;
+    margin-bottom: 30px;
+}

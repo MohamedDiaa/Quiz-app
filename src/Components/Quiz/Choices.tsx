@@ -1,12 +1,16 @@
 import "./Choices.css";
 
-function Choices() {
-  let choices = ["answer1", "answer2", "answer3", "answer4"];
+interface Props {
+
+  options: {name: string, img: string}[]
+}
+
+function Choices({options}:Props) {
 
   return (
     <ul>
-      {choices.map((option, index) => {
-        return <li className="choice">{option}</li>;
+      {options.map((option, index) => {
+        return <li className="choice">{option.name}</li>;
       })}
     </ul>
   );
