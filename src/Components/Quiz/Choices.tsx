@@ -11,7 +11,7 @@ function Choices({ answer, options, onAnswered }: Props) {
   // first option is the correct answer
   // we shuffle them
   let [answered, setAnswered] = useState(-1);
-
+  
   return (
     <>
     <ul>

@@ -22,15 +22,15 @@ function Quiz() {
   let [answersList, setAnswersList] = useState(answersListDefault);
 
   const handleOnAnswered = (userChoice: string) => {
-    let answerWithChoice:{
+    let answerWithChoice: {
       name: string;
       country: string;
       description: string;
       img: string;
       userChoice?: string;
-    } = answer 
-    
-    answerWithChoice.userChoice = userChoice
+    } = answer;
+
+    answerWithChoice.userChoice = userChoice;
     answersList.push(answerWithChoice);
     setAnswersList(answersList);
 
@@ -38,7 +38,7 @@ function Quiz() {
     SetShow(false);
     setTimeout(() => {
       let newSubset = [...Array(4).keys()].map(() => random(cakesList));
-      let newAnswer= newSubset[0];
+      let newAnswer = newSubset[0];
       setAnswer(newAnswer);
       setShuffled(shuffle(newSubset));
       SetShow(true);
@@ -49,21 +49,33 @@ function Quiz() {
   return (
     <div id="quiz">
       {count > 10 ? (
-        <div style={{marginBottom:"30px"}}>
-          <h1 style={{marginBottom:"10px"}}>Quiz is finished</h1>
-          <div style={{display:"grid",gridTemplateColumns:"auto auto auto", padding:"100px"}}>
-          {answersList.map((answer) => (
-            <div style={{display:"flex", flexDirection:"column"}}>
-              <img
-                src={answer.img}
-                alt=""
-                onLoad={() => SetImageLoaded(true)}
-                style={{width:"400px", objectFit:"contain"}}
-              />
-              <h3>Correct: {answer.name}</h3>
-              <h3 style={{color: answer.name == answer.userChoice ? "green" : "red"}}>Choice: {answer.userChoice}</h3>
-            </div>
-          ))}
+        <div style={{ marginBottom: "30px" }}>
+          <h1 style={{ margin: "0px 0", textAlign:"center" }}>Quiz is finished</h1>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "auto auto auto",
+              padding: "100px",
+            }}
+          >
+            {answersList.map((answer) => (
+              <div style={{ display: "flex", flexDirection: "column",width: "400px" }}>
+                <img
+                  src={answer.img}
+                  alt=""
+                  onLoad={() => SetImageLoaded(true)}
+                  style={{  objectFit: "contain" }}
+                />
+                <h3>Correct: {answer.name}</h3>
+                <h3
+                  style={{
+                    color: answer.name == answer.userChoice ? "green" : "red",
+                  }}
+                >
+                  Choice: {answer.userChoice}
+                </h3>
+              </div>
+            ))}
           </div>
         </div>
       ) : (
@@ -78,7 +90,7 @@ function Quiz() {
                 onLoad={() => SetImageLoaded(true)}
               />
               <div style={{ pointerEvents: imageLoaded ? "auto" : "none" }}>
-                <Question count={count} />
+                <Question count={count} country={answer.country} />
                 <Choices
                   answer={answer.name}
                   options={shuffled}
