@@ -7,12 +7,6 @@ const cakes: { name: string, country: string, description: string, img: string  
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Amandine_cake.jpg/600px-Amandine_cake.jpg"
     },
     {
-        "name": "Amygdalopita",
-        "country": "Greece",
-        "description": "An almond cake made with ground almonds, flour, butter, egg and pastry cream.",
-        "img": ""
-    },
-    {
         "name": "Angel cake",
         "country": "United Kingdom[1]",
         "description": "A type of layered sponge cake, often garnished with cream and food coloring.",
@@ -448,13 +442,7 @@ const cakes: { name: string, country: string, description: string, img: string  
         "name": "Cuca",
         "country": "Brazil",
         "description": "A dry, flat cake made of eggs, wheat and butter, with various toppings and fillings.",
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Cuca_de_banana.jpg/116px-Cuca_de_banana.jpg"
-    },
-    {
-        "name": "Cucumber cake",
-        "country": "Goa",
-        "description": "A cake prepared with cucumber as a primary ingredient. It is a popular dish in Goan cuisine.",
-        "img": ""
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Cuca_de_banana.jpg/600px-Cuca_de_banana.jpg"
     },
     {
         "name": "Cupcake",
@@ -616,7 +604,7 @@ const cakes: { name: string, country: string, description: string, img: string  
         "name": "Frankfurter Kranz (Frankfurt Crown Cake)",
         "country": "Germany",
         "description": "A sponge cake filled with buttercream icing and red jam (typically strawberry, blackcurrant or cherry); it is then topped with brittle nuts, toasted almond flakes and/or ground hazelnuts.",
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Frankfurter_Kranz.JPG/117px-Frankfurter_Kranz.JPG"
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Frankfurter_Kranz.JPG/600px-Frankfurter_Kranz.JPG"
     },
     {
         "name": "Frog cake",
@@ -635,12 +623,6 @@ const cakes: { name: string, country: string, description: string, img: string  
         "country": "",
         "description": "A chocolate cake containing fudge.",
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chocolate_fudge_cake_%288768339071%29.jpg/600px-Chocolate_fudge_cake_%288768339071%29.jpg"
-    },
-    {
-        "name": "Funing big cake",
-        "country": "Funing County, Jiangsu",
-        "description": "A cake made with sticky rice, white sugar, and refined lard. Due to health concerns associated with lard consumption, sometimes vegetable oil is used instead of lard.[13]",
-        "img": ""
     },
     {
         "name": "Funnel cake",
@@ -775,22 +757,10 @@ const cakes: { name: string, country: string, description: string, img: string  
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/A_part_of_Joffre.JPG/600px-A_part_of_Joffre.JPG"
     },
     {
-        "name": "Kabuni",
-        "country": "Albania[17]",
-        "description": "A traditional Albanian dessert made from rice fried in butter, mutton broth, raisins, sugar, salt, and spices.",
-        "img": ""
-    },
-    {
         "name": "Cardinal slice",
         "country": "Austria",
         "description": "A classic layered Viennese desert consisting of a sponge cake layer and meringue and filled with red currant jam. The colors of the layers, white and yellow, are meant to represent the colors of the Vatikan.[18]",
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/19-01-26-Kardinalschnitte-RalfR-IMG_20190126_135105_225.jpg/600px-19-01-26-Kardinalschnitte-RalfR-IMG_20190126_135105_225.jpg"
-    },
-    {
-        "name": "Khanom bodin",
-        "country": "Thailand",
-        "description": "A dense cake made from wheat or Maida flour, fresh butter, and sweetened condensed milk.",
-        "img": ""
     },
     {
         "name": "Khanom farang kudi chin",
@@ -833,12 +803,6 @@ const cakes: { name: string, country: string, description: string, img: string  
         "country": "Brittany",
         "description": "A sweet cake made with laminated dough.",
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Kouignamann.JPG/600px-Kouignamann.JPG"
-    },
-    {
-        "name": "Kornigou",
-        "country": "Brittany",
-        "description": "A fruit cake in the shape of antlers.",
-        "img": ""
     },
     {
         "name": "Kransekake",
@@ -995,12 +959,6 @@ const cakes: { name: string, country: string, description: string, img: string  
         "country": "Germany",
         "description": "A vanilla, coffee, or chocolate butter cake wherein two differently colored batters are swirled together to show a marble-like pattern.",
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Marmorkuchen.jpg/600px-Marmorkuchen.jpg"
-    },
-    {
-        "name": "Marjolaine",
-        "country": "France",
-        "description": "A long and rectangular variation on the dacquoise that combines almond and hazelnut meringue layers with chocolate buttercream.",
-        "img": ""
     },
     {
         "name": "Mazurek",
@@ -1273,12 +1231,6 @@ const cakes: { name: string, country: string, description: string, img: string  
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Queen_cakes_cooling_on_a_wire_rack_%2813475333725%29.jpg/600px-Queen_cakes_cooling_on_a_wire_rack_%2813475333725%29.jpg"
     },
     {
-        "name": "Queen Elizabeth cake",
-        "country": "Canada",
-        "description": "A moist date cake with a coconut topping.",
-        "img": ""
-    },
-    {
         "name": "Raisin cake",
         "country": "Germany",
         "description": "A cake prepared with raisins as a primary ingredient.",
@@ -1537,34 +1489,16 @@ const cakes: { name: string, country: string, description: string, img: string  
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Torta_caprese.jpg/600px-Torta_caprese.jpg"
     },
     {
-        "name": "Torta alla Monferrina",
-        "country": "Montferrat",
-        "description": "An autumn cake made from pumpkin, apples and sugar and flavored with dried figs, amaretti, chocolate, and rum.",
-        "img": ""
-    },
-    {
         "name": "Torta della nonna",
         "country": "Italy",
         "description": "Torta della nonna is a dessert typical of the region of Tuscany in Italy. It is a sweet pastry cake filled with vanilla-flavored custard and covered with pine nuts and confectioner's sugar.",
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Torta_della_nonna.jpg/125px-Torta_della_nonna.jpg"
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Torta_della_nonna.jpg/600px-Torta_della_nonna.jpg"
     },
     {
         "name": "Torta delle rose",
         "country": "Italy",
         "description": "A Mantuan and Brescian cake that is made with leavened dough rich in butter and sugar. The dough is rolled up and placed in the baking tin so that it takes the cake's characteristic shape of a basket of rosebuds, hence the name.[34]",
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Rose%27s_cake.JPG/600px-Rose%27s_cake.JPG"
-    },
-    {
-        "name": "Torta setteveli",
-        "country": "Palermo",
-        "description": "A seven-layer cake that includes chocolate and hazelnuts.",
-        "img": ""
-    },
-    {
-        "name": "Torta Tre Monti",
-        "country": "San Marino",
-        "description": "A cake with alternating layers of thin wafers and chocolate or hazelnut cream.",
-        "img": ""
     },
     {
         "name": "Træstammer[35]",
@@ -1583,12 +1517,6 @@ const cakes: { name: string, country: string, description: string, img: string  
         "country": "Scotland\nNorthern Ireland",
         "description": "A Madeira cake covered with a thick layer of chocolate and decorated with marzipan.",
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Tunis_Cake_Cross-Section_KG_Christmas_2021.jpg/600px-Tunis_Cake_Cross-Section_KG_Christmas_2021.jpg"
-    },
-    {
-        "name": "Tuxedo cake",
-        "country": "Unknown",
-        "description": "A sheet or circular cake with layers of chocolate cake, chocolate mousse, whipping cream and sometimes a layer of vanilla sponge cake. The dark and light colours of the cake are meant to resemble a tuxedo.",
-        "img": ""
     },
     {
         "name": "Twinkie",
@@ -1615,12 +1543,6 @@ const cakes: { name: string, country: string, description: string, img: string  
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Pineapple-upside-down-cake.jpg/600px-Pineapple-upside-down-cake.jpg"
     },
     {
-        "name": "Vestfirskar hveitikökur",
-        "country": "Iceland",
-        "description": "The Icelandic Westfjords wheatcakes are eaten both everyday and for festive occasions, but many consider them indispensable during Christmas. In the past, they were baked or fried on stoves like flat cakes, but today most people use a pan or a pancake pan and let them bake or toast in the dry pan.[36]",
-        "img": ""
-    },
-    {
         "name": "Victoria sponge cake",
         "country": "United Kingdom",
         "description": "A cake named after Queen Victoria, typically consisting of jam and whipped double cream or vanilla cream sandwiched between two sponge cakes; the top of the cake is decorated with a dusting of icing sugar.",
@@ -1631,12 +1553,6 @@ const cakes: { name: string, country: string, description: string, img: string  
         "country": "Unknown",
         "description": "A cake made without eggs, butter or milk. Wacky cake may have been created as the result of rationing during World War II, when milk and eggs were scarce.[37] The eggless batter means that the structure of the cake is entirely supported by gluten, which is strengthened by the acidic vinegar and salt.[38]",
         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Wacky_Cake.jpg/600px-Wacky_Cake.jpg"
-    },
-    {
-        "name": "Watergate cake",
-        "country": "United States",
-        "description": "A pistachio cake which shares its name with the Watergate scandal of the 1970s",
-        "img": ""
     },
     {
         "name": "Wedding cake",

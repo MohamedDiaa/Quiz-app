@@ -1,7 +1,7 @@
 import Choices from "./Choices";
 import Question from "./Question";
 import cakesList from "../../json/cakes";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Quiz() {
   let [count, SetCount] = useState(1);
@@ -23,14 +23,24 @@ function Quiz() {
 
   const handleOnAnswered = (userChoice: string) => {
     console.log("I am heremdkdfnsoinhoihworhoig")
+    let answerWithChoice:{
+      name: string;
+      country: string;
+      description: string;
+      img: string;
+      userChoice?: string;
+    } = answer 
+    
+    answerWithChoice.userChoice = userChoice
+    answersList.push(answerWithChoice);
+    setAnswersList(answersList);
+
     SetCount(count + 1);
     SetShow(false);
     setTimeout(() => {
       let newSubset = [...Array(4).keys()].map(() => random(cakesList));
-      let newAnswer = newSubset[0];
+      let newAnswer= newSubset[0];
       setAnswer(newAnswer);
-      answersList.push(newAnswer);
-      setAnswersList(answersList);
       setShuffled(shuffle(newSubset));
       SetShow(true);
       SetImageLoaded(true);
@@ -51,8 +61,8 @@ function Quiz() {
                 onLoad={() => SetImageLoaded(true)}
                 style={{width:"400px", objectFit:"contain"}}
               />
-              <h3>{answer.name}</h3>
-              <h3>{answer.userChoice}</h3>
+              <h3>Correct: {answer.name}</h3>
+              <h3>Choice: {answer.userChoice}</h3>
             </div>
           ))}
           </div>
