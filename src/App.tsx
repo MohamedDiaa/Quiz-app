@@ -1,16 +1,26 @@
+import { useState } from "react";
 import "./App.css";
+import Boarding from "./Components/Boarding/Boarding";
 import Quiz from "./Components/Quiz/Quiz";
-import Choices from "./Components/Quiz/Quiz";
 
 function App() {
+  const [bordingFinished, setBoardingFinished] = useState(false);
+
   return (
     <div className="Container">
       <div>
-      {/* <Carousal /> */}
-      <Quiz />
+        {bordingFinished ? (
+          <Quiz />
+        ) : (
+          <Boarding
+            onFinish={() => {
+              setBoardingFinished(true);
+            }}
+          />
+        )}
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
