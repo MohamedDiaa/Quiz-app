@@ -2,6 +2,7 @@ import Choices from "./Choices";
 import Question from "./Question";
 import cakesList from "../../json/cakes";
 import { useState } from "react";
+import "./Choices.css";
 
 function Quiz() {
   let [count, SetCount] = useState(1);
@@ -50,21 +51,23 @@ function Quiz() {
     <div id="quiz">
       {count > 10 ? (
         <div style={{ marginBottom: "30px" }}>
-          <h1 style={{ margin: "0px 0", textAlign:"center" }}>Quiz is finished</h1>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "auto auto auto",
-              padding: "100px",
-            }}
-          >
+          <h1 style={{ margin: "0px 0", textAlign: "center" }}>
+            Quiz is finished
+          </h1>
+          <div id="quiz-result">
             {answersList.map((answer) => (
-              <div style={{ display: "flex", flexDirection: "column",width: "400px" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  maxWidth: "400px",
+                }}
+              >
                 <img
                   src={answer.img}
                   alt=""
                   onLoad={() => SetImageLoaded(true)}
-                  style={{  objectFit: "contain" }}
+                  style={{ objectFit: "contain" }}
                 />
                 <h3>Correct: {answer.name}</h3>
                 <h3
