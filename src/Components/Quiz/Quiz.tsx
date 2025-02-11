@@ -18,11 +18,10 @@ function Quiz() {
     description: string;
     img: string;
     userChoice?: string;
-  }[] = [answer];
+  }[] = [];
   let [answersList, setAnswersList] = useState(answersListDefault);
 
   const handleOnAnswered = (userChoice: string) => {
-    console.log("I am heremdkdfnsoinhoihworhoig")
     let answerWithChoice:{
       name: string;
       country: string;
@@ -62,7 +61,7 @@ function Quiz() {
                 style={{width:"400px", objectFit:"contain"}}
               />
               <h3>Correct: {answer.name}</h3>
-              <h3>Choice: {answer.userChoice}</h3>
+              <h3 style={{color: answer.name == answer.userChoice ? "green" : "red"}}>Choice: {answer.userChoice}</h3>
             </div>
           ))}
           </div>
