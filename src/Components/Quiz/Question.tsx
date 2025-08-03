@@ -1,7 +1,7 @@
 import "./Choices.css"
 
 interface Props {
-  count: Number
+  count: number
   country: string
 }
 

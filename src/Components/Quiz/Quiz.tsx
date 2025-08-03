@@ -5,25 +5,25 @@ import { useState } from "react";
 import "./Choices.css";
 
 function Quiz() {
-  let [count, SetCount] = useState(1);
-  let [show, SetShow] = useState(true);
-  let [imageLoaded, SetImageLoaded] = useState(true);
+  const [count, SetCount] = useState(1);
+  const [show, SetShow] = useState(true);
+  const [imageLoaded, SetImageLoaded] = useState(true);
 
-  let subset = [...Array(4).keys()].map(() => random(cakesList));
-  let [answer, setAnswer] = useState(subset[0]);
-  let [shuffled, setShuffled] = useState(shuffle(subset));
+  const subset = [...Array(4).keys()].map(() => random(cakesList));
+  const [answer, setAnswer] = useState(subset[0]);
+  const [shuffled, setShuffled] = useState(shuffle(subset));
 
-  let answersListDefault: {
+  const answersListDefault: {
     name: string;
     country: string;
     description: string;
     img: string;
     userChoice?: string;
   }[] = [];
-  let [answersList, setAnswersList] = useState(answersListDefault);
+  const [answersList, setAnswersList] = useState(answersListDefault);
 
   const handleOnAnswered = (userChoice: string) => {
-    let answerWithChoice: {
+    const answerWithChoice: {
       name: string;
       country: string;
       description: string;
@@ -38,8 +38,8 @@ function Quiz() {
     SetCount(count + 1);
     SetShow(false);
     setTimeout(() => {
-      let newSubset = [...Array(4).keys()].map(() => random(cakesList));
-      let newAnswer = newSubset[0];
+      const newSubset = [...Array(4).keys()].map(() => random(cakesList));
+      const newAnswer = newSubset[0];
       setAnswer(newAnswer);
       setShuffled(shuffle(newSubset));
       SetShow(true);
